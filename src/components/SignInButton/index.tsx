@@ -21,7 +21,9 @@ export function SignInButton() {
         <button
         type="button"
         className={styles.signInButton}
-        onClick={() => signIn('github')}
+        onClick={() => signIn('github', {
+            callbackUrl: "https://ignews-luiz-fel.vercel.app/"
+        })}
         >
             <FaGithub color="#eba417" />
             Sign in with Github
