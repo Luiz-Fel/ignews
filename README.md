@@ -15,6 +15,7 @@ Você pode testá-lo clicando   [aqui](https://ignews-luiz-fel.vercel.app/)
 * Next.js
 * Typescript
 * Axios
+* Sass
 
 
 # Requerimentos 🛠
