@@ -2,9 +2,10 @@
 
 <img align="center" src="https://luiz-fel.com.br/images/ignewsLogo.png">
 <br />
+<br />
 Projeto desenvolvido no módulo de next.js do curso ignite da Rocketseat.
-
-Você pode testar clicando   [aqui](https://ignews-luiz-fel.vercel.app/)
+<br />
+Você pode testá-lo clicando   [aqui](https://ignews-luiz-fel.vercel.app/)
 
 <br />
 
