@@ -5,15 +5,15 @@ import { stripe } from "../../services/stripe";
 import { saveSubscription } from "./_lib/manageSubscription";
 
 async function buffer(readable : Readable) {
-    const chuncks = []
+    const chunks = []
 
-    for await (const chunck of readable) {
-        chuncks.push(
-            typeof chunck === 'string' ? Buffer.from(chunck) : chunck
-        )
+    for await (const chunk of readable) {
+        chunks.push(
+            typeof chunk === 'string' ? Buffer.from(chunk) : chunk
+        );
     }
 
-    return Buffer.concat(chuncks)
+    return Buffer.concat(chunks)
 }
 
 export const config = {
@@ -23,16 +23,16 @@ export const config = {
 }
 
 const relevantEvents = new Set([
-    'checkout.session.completed',
-    'customer.subscriptions.created',
-    'customer.subscriptions.updated',
-    'customer.subscriptions.deleted',
+    "checkout.session.completed",
+    'customer.subscription.created',
+    'customer.subscription.updated',
+    'customer.subscription.deleted',
 ])
 
 
 export default async (req : NextApiRequest, res : NextApiResponse) => {
 
-    if (req.method == 'POST') {
+    if (req.method === 'POST') {
 
         const buff = await buffer(req)
         const secret = req.headers['stripe-signature']
@@ -49,6 +49,7 @@ export default async (req : NextApiRequest, res : NextApiResponse) => {
         const { type } = event
     
         if (relevantEvents.has(type)) {
+            console.log('Evento recebido', event)
           try {
               switch (type) {
                   case 'customer.subscription.updated':
@@ -76,6 +77,7 @@ export default async (req : NextApiRequest, res : NextApiResponse) => {
                         throw new Error('Unhandled event.')
                 }
           }  catch  (err) {
+              console.log(err)
             return res.json( { error : 'Webhook handler failed'} )
           }
         }
