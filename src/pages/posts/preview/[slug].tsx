@@ -37,7 +37,7 @@ export default function PostPreview({post} : PostPreviewProps) {
         </Head>
         <main className={styles.container}>
             <article className={styles.post}>
-                <h1></h1>
+                <h1>{post.title}</h1>
                 <time>{post.excerpt}</time>
                 <div 
                 dangerouslySetInnerHTML={{__html: post.content}} 

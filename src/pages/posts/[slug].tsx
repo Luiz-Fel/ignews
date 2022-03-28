@@ -10,7 +10,6 @@ interface PostProps {
         content: string
         slug: string,
         title: string,
-        excerpt: string,
         updatedAt: string
     }
 }
@@ -23,8 +22,8 @@ export default function Post({post} : PostProps) {
         </Head>
         <main className={styles.container}>
             <article className={styles.post}>
-                <h1></h1>
-                <time>{post.excerpt}</time>
+                <h1>{post.title}</h1>
+                <time>{post.updatedAt}</time>
                 <div dangerouslySetInnerHTML={{__html: post.content}} className={styles.postContent} />
             </article>
         </main>

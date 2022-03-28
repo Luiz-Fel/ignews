@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "yarn test"
+    "test": "jest"
   },
   "dependencies": {
     "@prismicio/client": "^5.1.0",
