@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/api/auth/[...netxauth].ts"  ],
+, "src/pages/api/auth/[...netxauth].ts", "jest.config.js"  ],
   "exclude": [
     "node_modules"
   ]
