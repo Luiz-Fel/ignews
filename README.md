@@ -1,11 +1,12 @@
 # Ignews 📰
 
-<img align="center" src="https://luiz-fel.com.br/images/ignewsLogo.png">
-<br />
-<br />
+<img align="center" src="https://luiz-fel.com.br/images/ignewsLogo.png"></img>
+<br></br>
+<br></br>
 Projeto desenvolvido no módulo de next.js do curso ignite da Rocketseat.
-<br />
-Você pode testá-lo clicando   [aqui](https://ignews-luiz-fel.vercel.app/)
+<br></br>
+ Você pode testá-lo clicando   [Aqui](https://ignews-luiz-fel.vercel.app)
+
 
 <br />
 
